@@ -4,25 +4,90 @@
 <% include('./const/_siteData') %>
 <%- include('./base/_header') %>
 <body>
-    <header role="banner">
-        ヘッダー
-        <nav role="navigation">
-            <ul>
+    <div class="l-canvas">
+        <canvas id="webgl"></canvas>
+    </div>
+    <header class="l-header" role="banner">
+        <h1>null.tokyo</h1>
+        <nav class="l-nav" role="navigation">
+            <ul class="c-nav">
                 <li>
-                    <a href="<%- PATH.root %>">TOP</a>
+                    <a href="<%- PATH.root %>">Top</a>
                 </li>
                 <li>
-                    <a href="<%- PATH.root + "about" %>">ABOUT</a>
+                    <a href="<%- PATH.root + "about" %>">About</a>
+                </li>
+                <li>
+                    <a href="<%- PATH.root + "about" %>">Lab</a>
+                </li>
+                <li>
+                    <a href="<%- PATH.root + "about" %>">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main id="main" role="main">
-        メインコンテンツ
+    <main class="l-main" id="main" role="main">
+        <div class="l-top">
+            <h1>null.tokyo</h1>
+        </div>
+        <section class="l-about">
+            <h2>ABOUT</h2>
+            <p>Hi,I’m Yusuke Omi, Front-end developer in Tokyo Japan. </p>
+            <p></p>
+        </section>
+        <section class="l-study">
+            <header class="l-study__header">
+                <h2>Study</h2>
+            </header>
+            <div class="l-study__body">
+                <article>
+                    <header>
+                        <h3>Particles</h3> 
+                        <time >2018.08.18</time>
+                        <ul>
+                            <li>Three.js</li>
+                            <li>WebGL</li>
+                            <li>Instancing</li>
+                        </li>
+                    </header> 
+                    <figuer>
+                        <img src="" alt="">
+                    </figuer>
+                </article>
+                <article>
+                    <header>
+                        <h3>Particles</h3> 
+                        <time >2018.08.18</time>
+                        <ul>
+                            <li>Three.js</li>
+                            <li>WebGL</li>
+                            <li>Instancing</li>
+                        </li>
+                    </header> 
+                    <figuer>
+                        <img src="" alt="">
+                    </figuer>
+                </article>
+                <article>
+                    <header>
+                        <h3>Particles</h3> 
+                        <time >2018.08.18</time>
+                        <ul>
+                            <li>Three.js</li>
+                            <li>WebGL</li>
+                            <li>Instancing</li>
+                        </li>
+                    </header> 
+                    <figuer>
+                        <img src="" alt="">
+                    </figuer>
+                </article>
+            </div>
+        </section>
+        <section class="l-contact">
+            <h2>CONTACT</h2>
+        </section>
     </main>
-    <footer>
-        フッター
-    </footer>
     <%- include('./base/_footer') %>
 </body>
 </html>
