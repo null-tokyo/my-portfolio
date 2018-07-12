@@ -7,6 +7,8 @@ import Visual from './modules/Visual/index';
 // new SiteSpeedChecker().getAll();
 // new LongTaskChecker().observe();
 
+const $window = $(window);
+
 const v = new Visual({
     el: '#webgl'
 });
@@ -18,3 +20,7 @@ const tick = () => {
 }
 
 tick();
+
+$window.on('resize', () => {
+    v.resize();
+});
