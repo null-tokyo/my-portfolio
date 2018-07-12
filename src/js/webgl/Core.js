@@ -3,6 +3,7 @@
  * renderer / mainScene / cameraの管理
  */
 const OPTION = {
+    el: '#canvas',
     clearColor: 0xDEEEEE,
     isOrthographic: false
 }
@@ -58,15 +59,16 @@ class Core {
     /**
      * 描画
      */
-    update(){
+    render(){
         this.renderer.render(this.mainScene, this.camera);
     }
     /**
      * Rendererの作成
      */
     _createRenderer() {
+        console.log(this.opt);
         this.renderer = new THREE.WebGLRenderer({
-            canvas             : document.querySelector('#canvas'),
+            canvas             : document.querySelector(this.opt.el),
             alpha              : true,
             antialias          : true,
             stencil            : false,
@@ -76,7 +78,6 @@ class Core {
         this.renderer.autoClear = true;
         this.renderer.setClearColor( this.opt.clearColor, 1 );
         this.renderer.setPixelRatio(window.devicePixelRatio || 1);
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
     }
     /**
      * Main Sceneの作成
