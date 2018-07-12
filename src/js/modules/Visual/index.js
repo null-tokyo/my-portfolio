@@ -1,5 +1,6 @@
 import Core from '../../webgl/Core';
 import OffScreenRender from './OffScreenRender';
+import MainObject from './MainObject';
 
 class Visual extends Core {
     constructor(opt) {
@@ -10,8 +11,10 @@ class Visual extends Core {
     init() {
         super.init();
         this.camera = super.createCamera();
+        super.updatePerspectiveCamera(this.camera, this.width, this.height);
         this._initOSR();
-        this._initMain();
+        this._initBack();
+        this._initMainObject();
         this.resize();
         this.controlls = new THREE.OrbitControls(this.camera);
     }
@@ -21,8 +24,13 @@ class Visual extends Core {
         this.osr.addCamera(super.createCamera());
         super.updatePerspectiveCamera(this.osr.camera, this.width, this.height);
     }
-    _initMain() {
-        this.geometory = new THREE.BoxGeometry(2000, 2000, 2000);
+    _initMainObject (){
+        this.mainObject = new MainObject();
+        this.mainScene.add(this.mainObject);
+        console.log(this.mainScene);
+    }
+    _initBack() {
+        this.geometory = new THREE.BoxGeometry(1500, 1500, 1500);
         this.material = new THREE.MeshBasicMaterial({
             map: this.osr.renderTarget.texture,
             side: THREE.BackSide

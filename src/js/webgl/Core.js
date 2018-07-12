@@ -93,7 +93,7 @@ class Core {
         if(this.opt.isOrthographic || isOrthographic){
             return new THREE.OrthographicCamera();
         }
-        return new THREE.PerspectiveCamera(45, 1, 0.1, 2000);
+        return new THREE.PerspectiveCamera(60, 1, 0.1, 2000);
     }
     /**
      * オプションのアップデート
