@@ -16,6 +16,7 @@
   "globals": {
     "window": true,
     "THREE": true,
+    "$": true,
     "GPUComputationRenderer": true
   }
 }
