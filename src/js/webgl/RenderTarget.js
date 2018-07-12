@@ -5,9 +5,9 @@ class RenderTarget extends THREE.Scene{
     constructor() { 
       super();
       this.renderTarget;
-      this.init();
+      this._init();
     }
-    init(){
+    _init(){
       this.renderTarget = new THREE.WebGLRenderTarget(16, 16);
     }
     getTexture () {
