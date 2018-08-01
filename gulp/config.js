@@ -1,5 +1,5 @@
 const ENV  = process.env.NODE_ENV;
-const srcPath = './src';    
+const srcPath = 'src';    
 const distPath = './dist';
 
 module.exports = {

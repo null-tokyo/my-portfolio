@@ -36,7 +36,7 @@ class OffScreenRender extends RenderTarget {
         return this.camera;
     }
     draw(){
-        this.uniforms.time.value += timer.getDelta();
+        this.uniforms.time.value += timer.getDelta() * 0.1;
     }
     render(render){
         super.render(render, this.camera);

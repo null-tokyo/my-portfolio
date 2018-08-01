@@ -8,20 +8,16 @@
         <canvas id="webgl"></canvas>
     </div>
     <header class="l-header" role="banner">
-        <h1>null.tokyo</h1>
         <nav class="l-nav" role="navigation">
             <ul class="c-nav">
                 <li>
-                    <a href="<%- PATH.root %>">Top</a>
+                    <a href="<%- PATH.root + "#about" %>">About</a>
                 </li>
                 <li>
-                    <a href="<%- PATH.root + "about" %>">About</a>
+                    <a href="<%- PATH.root + "#works" %>">Works</a>
                 </li>
                 <li>
-                    <a href="<%- PATH.root + "about" %>">Lab</a>
-                </li>
-                <li>
-                    <a href="<%- PATH.root + "about" %>">Contact</a>
+                    <a href="<%- PATH.root + "#contact" %>">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -29,21 +25,45 @@
     <main class="l-main" id="main" role="main">
         <div class="l-top">
             <h1>null.tokyo</h1>
+            <p>Hi, I’m Front-end developer in Tokyo Japan.&#x1f590;</p>
         </div>
-        <section class="l-about">
-            <h2>ABOUT</h2>
-            <p>Hi,I’m Yusuke Omi, Front-end developer in Tokyo Japan. </p>
-            <p></p>
+        <section class="l-about" id="about">
+            <h2 class="c-heading">ABOUT</h2>
+            <p>Hi, I’m null（<a href="">@null_tokyo</a>）, Front-end developer in Tokyo Japan.</p>
+            <p>I started learned programming skills on my own at 2014.</p>
+            <p>Now, I work as a freelance developer.</p>
+            <p>My goal as a developer is changing people's mind or emotion with my output.<p>
+            <p>I Love Music, Illustration, Animation, and Eating yummy stuff&#x1f363;</p>
+            <h3>Skills</h3>
+            <ul class="c-skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>WebGL</li>
+                <li>Three.js</li>                
+                <li>Unity</li>
+                <li>GLSL</li>
+                <li>HLSL</li>  
+                <li>EJS</li>
+                <li>Pug</li>
+                <li>Sass</li>
+                <li>SCSS</li>
+                <li>Vue.js</li>
+                <li>Gulp.js</li>
+                <li>WebPack</li>
+                <li>Creative Coding</li>
+            </ul>
         </section>
-        <section class="l-study">
-            <header class="l-study__header">
-                <h2>Study</h2>
+        <section class="l-works" id="project">
+            <header class="l-works__header">
+                <h2 class="c-heading">Project</h2>
             </header>
-            <div class="l-study__body">
+            <div class="l-works__body">
                 <article>
                     <header>
                         <h3>Particles</h3> 
-                        <time >2018.08.18</time>
+                        <p>Private</p>
+                        <time>2018.08.18</time>
                         <ul>
                             <li>Three.js</li>
                             <li>WebGL</li>
@@ -84,8 +104,14 @@
                 </article>
             </div>
         </section>
-        <section class="l-contact">
-            <h2>CONTACT</h2>
+        <section class="l-contact" id="contact">
+            <h2 class="c-heading">CONTACT</h2>
+            <ul>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Github</li>
+                <li>Mails</li>
+            </ul>
         </section>
     </main>
     <%- include('./base/_footer') %>

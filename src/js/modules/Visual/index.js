@@ -16,7 +16,7 @@ class Visual extends Core {
         this._initBack();
         this._initMainObject();
         this.resize();
-        this.controlls = new THREE.OrbitControls(this.camera);
+        //this.controlls = new THREE.OrbitControls(this.camera);
     }
     _initOSR() {
         this.osr = new OffScreenRender();
@@ -26,11 +26,12 @@ class Visual extends Core {
     }
     _initMainObject (){
         this.mainObject = new MainObject();
+        this.mainObject.material.map = this.osr.renderTarget.texture;
         this.mainScene.add(this.mainObject);
         console.log(this.mainScene);
     }
     _initBack() {
-        this.geometory = new THREE.BoxGeometry(1500, 1500, 1500);
+        this.geometory = new THREE.SphereBufferGeometry(1000, 1000, 5);
         this.material = new THREE.MeshBasicMaterial({
             map: this.osr.renderTarget.texture,
             side: THREE.BackSide

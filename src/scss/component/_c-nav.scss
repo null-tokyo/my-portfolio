@@ -1,0 +1,9 @@
+.c-nav {
+    position: absolute;
+    top:  0;
+    left:  0;
+    display: flex;
+    > li {
+        list-style-type: none;
+    }
+}
