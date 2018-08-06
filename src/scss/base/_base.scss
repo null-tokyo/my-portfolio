@@ -10,14 +10,13 @@ body {
   font-weight: bold;
   font-size: 14px;
   font-family: $font-family-base;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.15em;
   color: $color-text;
   background-color: $color-base;
+  box-sizing: border-box;
 }
 
 a {
   color: $color-text;
   text-decoration: none;
-  &:hover {
-  }
 }
