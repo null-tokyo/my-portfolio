@@ -3,7 +3,7 @@
 <% include('./const/_path') %>
 <% include('./const/_siteData') %>
 <%- include('./base/_header') %>
-<body>
+<body class="is-en">
     <div class="l-canvas">
         <canvas id="webgl"></canvas>
     </div>
@@ -11,35 +11,60 @@
         <nav class="l-nav" role="navigation">
             <ul class="c-nav">
                 <li>
-                    <a href="<%- PATH.root + "#about" %>">ABOUT</a>
+                    <a href="<%- PATH.root + "#about" %>">
+                        <span>ABOUT</span>
+                        <span>私について</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="<%- PATH.root + "#project" %>">PROJECT</a>
+                    <a href="<%- PATH.root + "#project" %>">
+                        <span>PROJECT</span>
+                        <span>プロジェクト</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="<%- PATH.root + "#contact" %>">CONTACT</a>
+                    <a href="<%- PATH.root + "#contact" %>">
+                        <span>CONTACT</span>
+                        <span>接触</span>
+                    </a>
                 </li>
             </ul>
         </nav>
+        <div class="l-lang">
+            <ul>
+                <li>
+                    <a href="">EN</a>
+                </li>
+                 <li>
+                    <a href="">JA</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main class="l-main" id="main" role="main">
         <div class="l-top">
-            <h1>null.tokyo</h1>
-            <p>Hi, I’m Front-end developer in Tokyo Japan.&#x1f590;</p>
+            <h1>
+                <span class="c-en">null.tokyo</span>
+                <span class="c-ja">ヌル.東京</span>
+            </h1>
+            <p>
+                <span class="c-en">Hi, I’m Front-end developer in Tokyo Japan.&#x1f590;</span>
+                <span class="c-ja">こんにちは, 私は東京で働いているフロントエンドエンジニアです。&#x1f590;</span>
+            </p>
         </div>
         <section class="l-about" id="about">
             <h2 class="c-heading">
-                <span>ABOUT</span>
-                <span>私について</span>
+                <span class="c-en">ABOUT</span>
+                <span class="c-ja">私について</span>
             </h2>
-            <div>
+            <div class="c-en">
                 <p>Hi, I’m null（<a href="">@null_tokyo</a>）, Front-end developer in Tokyo Japan.</p>
                 <p>I started learned programming skills on my own at 2014.</p>
                 <p>Now, I work as a freelance developer.</p>
                 <p>My goal as a developer is changing people's mind or emotion with my output.</p>
                 <p>I Love Music, Illustration, Animation, and Eating yummy stuff&#x1f363;</p>
             </div>
-            <div>
+            <div class="c-ja">
                 <p>初めまして、nullです。（<a href="">@null_tokyo</a>）, 東京でフロントエンドディベロッパーとして働いてます。</p>
                 <p>2014年から独学でプログラミングを勉強し始めました。</p>
                 <p>現在はフリーランスのディベロッパーとして働いています。</p>
@@ -47,8 +72,8 @@
                 <p>音楽、イラスト、アニメーションと美味しいもを食べることが大好きです&#x1f363;</p>
             </div>
             <h3>
-            <span>Skills</span>
-            <span>スキル</span>
+                <span class="c-en">Skills</span>
+                <span class="c-ja">スキル</span>
             </h3>
             <ul class="c-skills">
                 <li>HTML</li>
@@ -71,7 +96,10 @@
         </section>
         <section class="l-project" id="project">
             <header class="l-project__header">
-                <h2 class="c-heading">Project</h2>
+                <h2 class="c-heading">
+                    <span class="c-en">Project</span>
+                    <span class="c-ja">プロジェクト</span>
+                </h2>
             </header>
             <div class="l-project__body">
                 <article>
@@ -121,9 +149,12 @@
         </section>
         <section class="l-contact" id="contact">
             <h2 class="c-heading">
-                <span>CONTACT</span>
-                <span>お問い合わせ</span>
+                <span class="c-en">CONTACT</span>
+                <span class="c-ja">お問い合わせ</span>
             </h2>
+            <p>
+                Feel free to please contact me!
+            </p>
             <ul>
                 <li>Twitter</li>
                 <li>Instagram</li>
